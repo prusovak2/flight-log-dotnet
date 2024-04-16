@@ -2,7 +2,7 @@
 {
     public enum FlightType
     {
-        Glider,
-        Towplane
+        Glider = 1,
+        Towplane = 2
     }
 }

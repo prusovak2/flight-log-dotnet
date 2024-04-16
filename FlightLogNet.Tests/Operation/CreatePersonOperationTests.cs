@@ -8,6 +8,7 @@ namespace FlightLogNet.Tests.Operation
     using Moq;
 
     using Xunit;
+    using System.Net.Sockets;
 
     public class CreatePersonOperationTests
     {
@@ -69,14 +70,29 @@ namespace FlightLogNet.Tests.Operation
         [Fact]
         public void Execute_ShouldCreateNewClubMember()
         {
-            // Arrange
+            // TODO 7.1: Naimplementujte test s použitím mockù (done)
 
-            // TODO 7.1: Naimplementujte test s použitím mockù
+            // Arrange
+            var createPersonOperation = this.CreateCreatePersonOperation();
+            PersonModel personModel = new PersonModel
+            {
+                FirstName = "John",
+                LastName = "Smith",
+                MemberId = 42
+            };
+
+            long id;
+            PersonModel clubMember;
+            this.mockPersonRepository.Setup(repository => repository.TryGetPerson(personModel, out id)).Returns(false);
+            this.mockClubUserDatabase.Setup(db => db.TryGetClubUser(personModel.MemberId, out personModel)).Returns(true);
+            this.mockPersonRepository.Setup(repository => repository.CreateClubMember(personModel)).Returns(10);
 
             // Act
+            var result = createPersonOperation.Execute(personModel);
 
             // Assert
-
+            Assert.True(result > 0);
+            this.mockRepository.VerifyAll();
         }
     }
 }

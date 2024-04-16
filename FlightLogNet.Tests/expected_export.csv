@@ -1,0 +1,6 @@
+FlightId, TakeOffTime, LandingTime, Immatriculation, Pilot, Copilot, Task
+1, 01.01.2024 11:50:00, , OK-V23428, Lenka Kiasová, , VLEK
+4, 01.01.2024 11:50:00, , OK-B128, Silvie Hronová, , Tahac
+444, 07.01.2020 16:47:10, 07.01.2020 17:17:10, OK-B128, Lenka Kiasová, , Tahac
+24057, 01.01.2024 10:20:00, , OK-V23428, Petr Hrubec, , VLEK
+24058, 01.01.2024 10:20:00, , OK-B128, Silvie Hronová, , Tahac

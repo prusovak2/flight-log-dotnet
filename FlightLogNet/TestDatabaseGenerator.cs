@@ -17,6 +17,12 @@
             CreateTestDatabaseWithFixedTime(DateTime.Now, configuration);
         }
 
+        internal static void RenewDatabase(IConfiguration configuration, DateTime fixedTime)
+        {
+            DeleteOldDatabase(configuration);
+            CreateTestDatabaseWithFixedTime(fixedTime, configuration);
+        }
+
         public static void DeleteOldDatabase(IConfiguration configuration)
         {
             using var dbContext = new LocalDatabaseContext(configuration);
