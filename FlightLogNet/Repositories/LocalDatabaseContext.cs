@@ -34,7 +34,7 @@
             }
             else
             {
-                optionsBuilder.UseSqlite("Data Source=local.db");
+                optionsBuilder.UseSqlite("Data Source=./db/local.db");
             }
         }
     }

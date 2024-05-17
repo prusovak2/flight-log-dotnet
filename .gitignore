@@ -365,3 +365,5 @@ frontend/src/environment.ts
 frontend/dist
 
 .idea
+
+FlightLogNet/db

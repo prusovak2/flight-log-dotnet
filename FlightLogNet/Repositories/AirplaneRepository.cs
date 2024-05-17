@@ -49,6 +49,13 @@
                 airplaneId = firstAirplane.Id;
                 return true;
             }
+
+            //var clubAirplane = dbContext.ClubAirplanes.FirstOrDefault(airplane => airplane.Id == airplaneModel.Id);
+            //if (clubAirplane != null)
+            //{
+            //    airplaneId = clubAirplane.Id;
+            //    return true;
+            //}
             else
             {
                 airplaneId = 0;

@@ -156,6 +156,10 @@
                     AirplaneType = new AirplaneType { Type = "Zlín Z-42M" }
                 });
 
+            dbContext.Airplanes.AddRange(
+                new Airplane { Id = 2, GuestAirplaneImmatriculation = "OK-B128", GuestAirplaneType = "L-13A Blaník" },
+                new Airplane { Id = 1, GuestAirplaneImmatriculation = "OK-V23428", GuestAirplaneType = "Zlín Z-42M" });
+
             dbContext.SaveChanges();
         }
     }
