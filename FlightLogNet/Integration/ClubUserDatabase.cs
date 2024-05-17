@@ -30,7 +30,6 @@
 
         private List<ClubUser> ReceiveClubUsers()
         {
-            // TODO 8.2: Naimplementujte volání endpointu ClubDB pomocí RestSharp (done)
             var response = _client.Get<List<ClubUser>>(_request);
             return response;
         }

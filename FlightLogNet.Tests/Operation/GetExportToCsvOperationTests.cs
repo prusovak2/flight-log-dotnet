@@ -10,7 +10,6 @@ namespace FlightLogNet.Tests.Operation
 
     public class GetExportToCsvOperationTests(GetExportToCsvOperation getExportToCsvOperation, IConfiguration configuration)
     {
-        // TODO 6.1: Odstraòtì skip a doplntì test, aby otestoval vrácený CSV soubor. (done)
         [Fact]
         public void Execute_StateUnderTest_ExpectedBehavior()
         {

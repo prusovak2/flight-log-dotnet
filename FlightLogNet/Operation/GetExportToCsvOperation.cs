@@ -10,9 +10,6 @@
         private const string _header = "FlightId, TakeOffTime, LandingTime, Immatriculation, Pilot, Copilot, Task";
         public byte[] Execute()
         {
-            // TODO 5.1: Naimplementujte export do CSV (done)
-            // TIP: CSV soubor je pouze string, který se dá vytvořit pomocí třídy StringBuilder
-            // TIP: Do bytové reprezentace je možné jej převést například pomocí metody: Encoding.UTF8.GetBytes(..)
             IList<FlightModel> flights = flightRepository.GetAllFlights();
             StringBuilder builder = new StringBuilder();
             builder.AppendLine(_header);

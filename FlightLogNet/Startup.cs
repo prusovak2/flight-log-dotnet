@@ -21,7 +21,6 @@ namespace FlightLogNet
             InjectConfiguration.Initialization(services);
             services.AddControllers();
             services.AddAutoMapper(typeof(AutoMapperProfile));
-            // services.AddAutoMapper(System.Reflection.Assembly.GetCallingAssembly());
             services.AddCors(options =>
             {
                 options.AddDefaultPolicy(
